@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tokaa Raafat | Junior Data Analyst & Data Science Portfolio</title>
+<meta name="description" content="Junior Data Analyst developing toward Data Science. Python, SQL, Excel and Power Query projects.">
+<meta name="theme-color" content="#0B2A3C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F1E6;--bg2:#ECE6D3;--card:#FBF8F0;--ink:#1E2A23;--mute:#4F5A4A;--forest:#1F3328;--forest2:#2A4235;--sage:#8C9C7A;--olive:#56633A;--brass:#8F6D1C;--brassl:#DDB962;--line:#D2CBB4;--on:#F5F1E6;--onm:#CBD3BC;
+--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brassl);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--forest);color:var(--on);padding:.5rem 1rem;z-index:99}.skip:focus{left:8px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.015em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.eyebrow{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--olive);margin-bottom:.8rem}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1rem}
+.sub{color:var(--mute);max-width:38rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.2rem var(--serif);text-decoration:none}
+nav ul{display:flex;gap:1.7rem;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--mute);padding:.4rem 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav ul a:hover,nav ul a.on{color:var(--ink);border-color:var(--brassl)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:.45rem .85rem;font:500 .9rem var(--sans);cursor:pointer;border-radius:4px}
+@media(max-width:820px){.menu{display:block}nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem clamp(1.25rem,4vw,2.5rem) 1rem}nav ul.open{display:flex}nav ul a{display:block;padding:.7rem 0}}
+.hero{background:radial-gradient(640px circle at 78% 20%,rgba(140,156,122,.22),transparent 62%),radial-gradient(480px circle at 5% 100%,rgba(221,185,98,.10),transparent 60%),var(--forest);color:var(--on);padding:clamp(3rem,7vw,5.5rem) 0 clamp(3rem,7vw,5.5rem)}
+.hero .grid{display:block}
+.pill{display:inline-flex;align-items:center;gap:.55rem;border:1px solid rgba(245,241,230,.25);border-radius:99px;padding:.3rem .9rem;font-size:.88rem;color:var(--onm);margin-bottom:1.5rem}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--brassl)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:700;margin-bottom:1.3rem}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--brassl)}
+.lead{max-width:35rem;color:#DDE2D0;font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:.85rem 1.4rem;border:2px solid var(--brassl);border-radius:4px;transition:transform .2s,background .2s}
+.btn.p{background:var(--brassl);color:#1E2A23}.btn.p:hover{transform:translateY(-2px);background:#EBCB7C}
+.btn.s{color:var(--on)}.btn.s:hover{background:rgba(245,241,230,.1)}
+.glance{background:var(--forest2);border:1px solid rgba(245,241,230,.16);border-top:4px solid var(--brassl);padding:1.5rem 1.6rem;border-radius:4px}
+.glance h2{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--onm);margin-bottom:.4rem}
+.glance dl>div{padding:.85rem 0;border-bottom:1px solid rgba(245,241,230,.14)}.glance dl>div:last-child{border:0}
+.glance dt{font-size:.82rem;color:var(--onm)}.glance dd{font:600 1.08rem/1.35 var(--serif)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(2.5rem,5vw,4rem);border-top:1px solid rgba(245,241,230,.2)}
+.stats div{padding:1.5rem 1.2rem 1.7rem 0}.stats div+div{padding-left:1.4rem;border-left:1px solid rgba(245,241,230,.2)}
+.stats b{display:block;font:600 1.9rem var(--serif);color:var(--brassl)}.stats span{font-size:.95rem;color:var(--onm)}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stats div+div{border-left:0;border-top:1px solid rgba(245,241,230,.2);padding-left:0}}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}.about p{max-width:40rem}.about p+p{margin-top:1rem}.about p:first-child{font:600 clamp(1.4rem,2.6vw,1.8rem)/1.35 var(--serif)}
+.vc{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--olive);border-radius:10px;padding:1.5rem;box-shadow:0 22px 44px -30px rgba(15,24,19,.45);transition:transform .25s}.vc:hover{transform:translateY(-3px)}
+.vt{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--olive);margin-bottom:1rem}
+.steps{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin-bottom:1rem}.steps li{font-size:.85rem;font-weight:500;color:var(--mute)}.steps li+li::before{content:"→";margin-right:.4rem;color:var(--sage)}
+.vc svg{width:100%;height:auto;display:block}.vc .b{fill:var(--sage);transform-box:fill-box;transform-origin:bottom;transform:scaleY(.15);transition:transform 1s cubic-bezier(.2,.7,.2,1)}.in .vc .b{transform:none}.vc .h{fill:var(--olive)}.vc .ln{fill:none;stroke:var(--brass);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.vc .dt{fill:var(--brass)}.vc .ax{stroke:var(--line)}
+.chips{display:flex;gap:.4rem;list-style:none;padding:0;margin:1rem 0 .6rem}.chips li{font-size:.84rem;font-weight:500;border:1px solid var(--sage);border-radius:99px;padding:.1rem .65rem}.cap{font-size:.78rem;color:var(--mute)}
+.next{margin-top:1.6rem;padding:1rem 1.2rem;border-left:3px solid var(--olive);background:var(--bg2);border-radius:0 4px 4px 0}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:2.2rem}}
+.skills{background:var(--bg2)}
+.sk{display:grid;grid-template-columns:repeat(5,1fr);margin-top:2.2rem}
+.sk>div{padding:1.2rem 1.4rem 1.4rem 0;border-top:3px solid var(--olive)}.sk>div+div{padding-left:1.4rem;border-left:1px solid var(--line)}
+.sk h3{font-size:1.15rem;margin-bottom:.8rem;color:var(--olive)}
+.sk ul{list-style:none;padding:0;font-size:.97rem}.sk li{padding:.18rem 0}.sk li.core{font-weight:700}
+.learn{margin-top:2rem;color:var(--mute)}.learn b{color:var(--ink)}
+@media(max-width:900px){.sk{grid-template-columns:1fr 1fr}.sk>div{border-left:0!important;padding-left:0!important}}
+@media(max-width:520px){.sk{grid-template-columns:1fr}}
+.case{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);padding:clamp(2.5rem,5vw,4rem) 0;border-top:1px solid var(--line);align-items:start}
+.num{font:600 .9rem var(--sans);color:var(--brass);letter-spacing:.08em;margin-bottom:.5rem}
+.case h3{font-size:clamp(1.6rem,3vw,2.15rem);margin-bottom:.9rem}
+.q{font:italic 400 1.15rem/1.45 var(--serif);margin-bottom:1rem}
+.case dt{font:700 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin-top:1.1rem}.case dd{color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:1.2rem 0}
+.tags li{font-size:.84rem;font-weight:500;border:1px solid var(--sage);background:color-mix(in srgb,var(--sage) 14%,transparent);padding:.12rem .6rem;border-radius:99px}
+.links{display:flex;gap:1.3rem;flex-wrap:wrap}
+.links a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--brassl);padding-bottom:1px;transition:color .2s,border-color .2s}
+.links a:hover{color:var(--olive);border-color:var(--olive)}
+.vis{display:grid;gap:1rem}
+.shot{position:relative;margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--card);aspect-ratio:16/10;box-shadow:0 18px 40px -26px rgba(15,24,19,.5)}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block}.th{width:100%;height:100%;display:block;background:var(--bg2)}.th .k{fill:var(--card);stroke:var(--line)}.th .b{fill:var(--sage)}.th .h{fill:var(--olive)}.th .l1{fill:none;stroke:var(--olive);stroke-width:2.5}.th .l2{fill:none;stroke:var(--brass);stroke-width:2.5}.th .dsh{stroke-dasharray:5 4}
+.panel{background:var(--forest);color:var(--on);padding:1.5rem;border-radius:6px;border-top:4px solid var(--brassl);transition:transform .25s}
+.case:hover .panel{transform:translateY(-3px)}
+.panel h4{font:600 .98rem var(--sans);color:var(--onm);margin-bottom:1rem}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.kpis b{display:block;font:600 2rem/1 var(--serif);color:var(--brassl)}.kpis span{font-size:.9rem;color:var(--onm)}
+.hb{margin:.85rem 0}.lb{display:flex;justify-content:space-between;gap:1rem;font-size:.92rem;margin-bottom:.3rem}
+.tr{height:10px;background:rgba(245,241,230,.14);border-radius:5px;overflow:hidden}.fl{height:100%;width:0;background:rgba(245,241,230,.55);border-radius:5px;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}.fl.hi{background:var(--brassl)}
+.in .fl{width:var(--w)}
+.note{font-size:.84rem;color:var(--onm);margin-top:1rem}
+@media(max-width:820px){.case{grid-template-columns:1fr}}
+.more{margin-top:1rem}.more .btn{border-color:var(--ink);color:var(--ink)}.more .btn:hover{background:var(--bg2)}
+.tl{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+.item{border-left:2px solid var(--sage);padding:0 0 1.8rem 1.4rem;position:relative}
+.item::before{content:"";position:absolute;left:-7px;top:.5rem;width:12px;height:12px;background:var(--brassl);border-radius:50%}
+.item time{font-weight:700;color:var(--olive);font-size:.92rem}.item h3{font-size:1.3rem;margin:.2rem 0 .1rem}.item .org{color:var(--mute);margin-bottom:.6rem}
+.item ul{padding-left:1.1rem;color:var(--mute)}.item li{margin-bottom:.4rem}
+.col>h2{font-size:1.9rem;margin-bottom:1.5rem}
+@media(max-width:820px){.tl{grid-template-columns:1fr}}
+.contact{background:var(--forest);color:var(--on)}
+.contact h2{font-size:clamp(2.2rem,5vw,3.6rem)}.contact p{max-width:36rem;color:#DDE2D0}
+.cl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2.4rem;border-top:1px solid rgba(245,241,230,.25)}
+.cl a,.copy{text-decoration:none;padding:1.2rem 1rem 1.2rem 0;border-bottom:1px solid rgba(245,241,230,.25);transition:color .2s}
+.cl a:hover,.copy:hover{color:var(--brassl)}.cl small{display:block;color:var(--onm);font-size:.86rem}.cl strong{font:600 1.12rem var(--serif);word-break:break-word}
+.copy{font:700 1.05rem var(--serif);color:var(--on);background:none;border-top:0;border-left:0;border-right:0;text-align:left;cursor:pointer}
+footer{background:var(--forest);color:var(--onm);border-top:1px solid rgba(245,241,230,.18);padding:1.4rem 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}footer a{color:var(--brassl)}
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--sage),var(--brassl));z-index:50}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}.rv{opacity:1;transform:none}.fl{width:var(--w)}}
+
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:28px;right:6%;width:200px;height:110px;background:radial-gradient(circle,rgba(221,185,98,.55) 1.5px,transparent 2px) 0 0/16px 16px;opacity:.5;pointer-events:none}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;position:relative}
+.tag{font:700 .8rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brassl);padding-bottom:.9rem;margin-bottom:1.2rem;border-bottom:2px solid var(--brassl);display:inline-block}
+.hg h1{display:flex;flex-direction:column;font-size:clamp(3.8rem,10.5vw,8.2rem);line-height:.88;letter-spacing:-.035em;margin-bottom:1.6rem}
+.g1{color:var(--on);font-weight:700}.g2{color:var(--brassl);font-weight:400;font-style:italic;padding-left:.12em}
+.role{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;font-size:.98rem;margin-bottom:1rem;background:rgba(245,241,230,.1);border-left:4px solid var(--brassl);padding:.45rem .9rem;border-radius:0 4px 4px 0}
+.role i{display:none}
+.pn{background:var(--forest2);border:1px solid rgba(245,241,230,.16);border-radius:14px;padding:1.2rem;box-shadow:0 30px 60px -34px rgba(0,0,0,.6)}
+.ph{display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.8rem}.ph>span{font:700 .76rem var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--onm)}
+.seg{display:inline-flex;border:1px solid rgba(245,241,230,.28);border-radius:99px;padding:3px}
+.seg button{background:none;border:0;color:var(--onm);font:600 .82rem var(--sans);padding:.3rem .75rem;border-radius:99px;cursor:pointer;transition:background .25s,color .25s}
+.seg button[aria-pressed="true"]{background:var(--brassl);color:#1E2A23}
+.seg button:hover:not([aria-pressed="true"]){color:#fff}
+#sc{width:100%;height:auto;display:block}
+#sc .gl{stroke:rgba(245,241,230,.12)}#sc .ax{stroke:rgba(245,241,230,.35)}#sc text{fill:var(--onm);font:600 11px var(--sans)}
+#sc circle{fill:var(--sage);transition:transform 1.1s cubic-bezier(.3,.8,.2,1),opacity .6s,fill .6s,r .2s;cursor:pointer}
+#sc circle:hover{r:8;fill:var(--brassl)}#sc circle.out{opacity:.22}#sc.st2 circle:not(.out){fill:#B9C7A3}
+#sc .tl2{fill:none;stroke:var(--brassl);stroke-width:3;stroke-linecap:round;stroke-dasharray:480;stroke-dashoffset:480;transition:stroke-dashoffset 1.2s ease .4s}
+#sc.st2 .tl2{stroke-dashoffset:0}#sc .an{opacity:0;transition:opacity .6s .9s}#sc.st2 .an{opacity:1}
+.cap2{font-weight:500;font-size:.95rem;min-height:2.9em;margin-top:.5rem}.cap3{font-size:.76rem;color:var(--onm)}
+.about{align-items:center}
+.about p:first-child{font:500 clamp(1.25rem,2.2vw,1.55rem)/1.45 var(--serif)}
+.vc2{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--olive);border-radius:14px;padding:1.4rem;box-shadow:0 22px 44px -30px rgba(15,24,19,.45)}
+.vc2 .ph>span{color:var(--olive)}.vc2 .seg{border-color:var(--line)}.vc2 .seg button{color:var(--mute)}.vc2 .seg button[aria-pressed="true"]{background:var(--olive);color:#fff}
+.tbl{display:flex;flex-direction:column;gap:6px}.r{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-height:24px;transition:max-height .6s,opacity .5s,margin .6s}
+.r i{height:24px;border-radius:6px;background:var(--sage);transition:background .5s,border-color .5s}
+.r .na{background:transparent;border:1.5px dashed var(--brass)}.tbl.clean .na{background:var(--sage);border-color:transparent}
+.r.dup i{background:var(--brass);opacity:.8}.tbl.clean .dup{max-height:0;opacity:0;margin-top:-6px;overflow:hidden}
+.fl2{font-size:.88rem;color:var(--mute);margin:.7rem 0 .4rem;min-height:1.4em}
+.vc2 svg{width:100%;height:auto;display:block}.bb{fill:var(--sage);opacity:.35;transform-box:fill-box;transform-origin:bottom;transform:scaleY(.4);transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .6s}
+.vc2.clean .bb{transform:none;opacity:1}.vc2.clean .bb:nth-of-type(3),.vc2.clean .bb:nth-of-type(5){fill:var(--olive)}
+.vc2 .cap{margin-top:.4rem}
+@media(max-width:900px){.hg{grid-template-columns:1fr}.hg h1{font-size:clamp(3.4rem,17vw,6rem)}}
+@media(prefers-reduced-motion:reduce){#sc circle,#sc .tl2,.r,.bb{transition:none}}
+
+:root{--navy:#0B2A33;--teal:#1FA38A;--tealb:#2FD0AA;--mint:#A9E3D0;--sky:#86C7DC}
+.hero::before{background:radial-gradient(circle,rgba(47,208,170,.6) 1.5px,transparent 2px) 0 0/16px 16px}
+.hg h1{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;font-weight:400;font-size:clamp(5rem,14vw,10.5rem);line-height:.84;letter-spacing:.01em;margin-bottom:1.3rem}
+.g1{color:var(--on);font-weight:400}.g2{color:var(--tealb);font-style:normal;font-weight:400;padding-left:0}
+.band{display:block;background:linear-gradient(90deg,var(--navy),#14504F);color:var(--on);padding:.75rem 1.1rem;font:700 .86rem var(--sans);letter-spacing:.12em;text-transform:uppercase;border-radius:4px;margin-bottom:1rem;border-left:0}
+.tools{display:flex;list-style:none;padding:0;background:var(--card);color:var(--ink);border-radius:12px;margin-bottom:1.1rem;overflow:hidden}
+.tools li{flex:1;display:flex;align-items:center;justify-content:center;gap:.55rem;padding:.7rem .4rem;font-weight:700;font-size:.95rem}.tools li+li{border-left:1px solid var(--line)}
+.tools b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:7px;color:#fff;font:700 .72rem var(--sans)}
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}.wide{grid-column:1/-1}
+.kc{background:var(--card);color:var(--ink);border-radius:14px;padding:.9rem 1.1rem;box-shadow:0 18px 36px -26px rgba(0,0,0,.6);transition:transform .25s}.kc:hover{transform:translateY(-3px)}
+.kc small{display:block;font:700 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.kc b{display:block;font:700 2.3rem/1.1 'Bebas Neue',Impact,sans-serif;letter-spacing:.02em;color:var(--navy)}
+.kc span{font-size:.85rem;color:var(--mute)}.kc svg{width:100%;height:30px;display:block;margin-top:.2rem}
+.pn{background:var(--navy);position:relative}
+.pn .seg button[aria-pressed="true"]{background:var(--tealb);color:var(--navy)}
+#sc circle{fill:var(--mint)}#sc circle:hover{fill:#fff}#sc.st2 circle:not(.out){fill:var(--tealb)}#sc .tl2{stroke:var(--tealb)}#sc .an{fill:var(--tealb)}
+.cap2{font-size:.9rem;min-height:2.7em;margin-top:.3rem}
+.hr .cap3{margin-top:.6rem}
+#tip{position:absolute;pointer-events:none;background:#fff;color:var(--navy);font:700 .78rem var(--sans);padding:.25rem .55rem;border-radius:6px;opacity:0;transition:opacity .15s;z-index:2;white-space:nowrap}
+.vc2{border-top-color:var(--teal)}.vc2 .ph>span{color:var(--teal)}
+.r i{background:var(--teal)}.tbl.clean .na{background:var(--teal)}
+.vc2 .seg button[aria-pressed="true"]{background:var(--teal);color:#fff}
+.bb{fill:var(--teal)}.vc2.clean .bb:nth-of-type(3),.vc2.clean .bb:nth-of-type(5){fill:var(--sky)}
+@media(max-width:900px){.hg{grid-template-columns:1fr}.hg h1{font-size:clamp(4.8rem,26vw,8.5rem)}}
+@media(max-width:480px){.kc b{font-size:1.9rem}.tools li{font-size:.85rem}.tools b{width:26px;height:26px}}
+
+:root{--bg:#F4F8F6;--bg2:#E7F1ED;--card:#fff;--ink:#0B2A3C;--mute:#47616F;--forest:#0B2A3C;--forest2:#12384D;--sage:#3FBF9F;--olive:#0E7C66;--brass:#0E8F74;--brassl:#2FD1A6;--line:#D3E2DC;--on:#F4F8F6;--onm:#B7CCD6}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1A24;--bg2:#0F2531;--card:#12303F;--ink:#E8F1EE;--mute:#9DB5C0;--line:#1F4150;--olive:#5FD3B3;--brass:#2FD1A6;--forest:#06131B;--forest2:#0D2634}}
+:root[data-theme="dark"]{--bg:#0A1A24;--bg2:#0F2531;--card:#12303F;--ink:#E8F1EE;--mute:#9DB5C0;--line:#1F4150;--olive:#5FD3B3;--brass:#2FD1A6;--forest:#06131B;--forest2:#0D2634}
+h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.015em;line-height:1.02;font-size:clamp(2.2rem,4.6vw,3.3rem)}
+.logo{font:400 1.45rem 'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.hero{background:var(--bg);color:var(--ink);padding-top:clamp(2.5rem,6vw,4.5rem)}
+.hero::before{display:none}
+.sh{position:absolute;pointer-events:none}.xs1{left:0;top:0;width:clamp(26px,5vw,70px);height:46%;background:linear-gradient(#12A383,#BFEBDD);clip-path:polygon(0 0,100% 18%,0 100%)}
+.xs2{right:0;top:12%;width:clamp(30px,6vw,90px);height:70%;background:linear-gradient(#BFEBDD,#5CC3E8);clip-path:polygon(100% 0,100% 100%,0 70%)}
+.xs3{right:0;bottom:0;width:clamp(50px,9vw,140px);height:38%;background:#0B2A3C;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.dots{position:absolute;top:24px;left:36%;width:130px;height:86px;background:radial-gradient(circle,#12A383 1.6px,transparent 2px) 0 0/14px 14px;opacity:.7}
+.hg h1.nm{font:400 clamp(4.6rem,13vw,10rem)/.85 'Anton',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.005em;margin-bottom:1.3rem}
+.hg h1.nm .g1{color:var(--ink);font-style:normal}.hg h1.nm .g2{color:#12A383;font-style:normal;padding:0}
+.band{display:inline-block;background:linear-gradient(90deg,#0B2A3C 72%,rgba(11,42,60,0));color:#fff;font:700 .9rem var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:.8rem 3.5rem .8rem 1.2rem;margin-bottom:1.3rem;max-width:100%}
+.tools{display:flex;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:1.2rem;max-width:30rem}
+.tools span{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;font-weight:700;flex:1}.tools span+span{border-left:1px solid var(--line)}
+.ic{display:grid;place-items:center;width:30px;height:30px;border-radius:6px;font:700 .72rem var(--sans);color:#fff}.i1{background:#0B2A3C}.i2{background:#12A383}.i3{background:#5CC3E8;color:#0B2A3C}
+.lead{color:var(--mute);max-width:30rem;font-size:1.05rem}
+.hero .btn{border-color:var(--ink)}.hero .btn.p{background:var(--ink);color:#fff}.hero .btn.p:hover{background:#12384D}
+.hero .btn.s{color:var(--ink)}.hero .btn.s:hover{background:var(--bg2)}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:.9rem}
+.kp div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;box-shadow:0 12px 26px -20px rgba(11,42,60,.5);transition:transform .25s}.kp div:hover{transform:translateY(-3px)}
+.kp small{display:block;font:700 .66rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}.kp b{font:400 1.9rem 'Anton',Impact,sans-serif;color:var(--ink);letter-spacing:.01em}
+.pn{background:var(--forest)!important;border-radius:12px}
+#sc .tl2{stroke:#5CC3E8}#sc.st2 circle:not(.out){fill:#8FE3CC}#sc circle:hover{fill:#fff}.cap2{color:#fff}
+.hl,.hr{position:relative;z-index:1}
+@media(max-width:900px){.hg h1.nm{font-size:clamp(4rem,22vw,7rem)}.band{padding-right:1.5rem}.dots{left:55%}}
+@media(max-width:520px){.kp{grid-template-columns:1fr 1fr}.kp div:last-child{grid-column:1/-1}}
+
+.hero{padding:clamp(3rem,7vw,5.5rem) 0}
+.hg{align-items:center}
+.hg h1.nm{font-size:clamp(3.6rem,9vw,7rem);margin-bottom:1.2rem}
+.band{background:none;color:var(--olive);padding:0 0 0 .9rem;border-left:4px solid #12A383;font-size:.85rem;letter-spacing:.1em;margin-bottom:1.4rem}
+.tools{background:none;border:0;border-radius:0;margin:0 0 1.2rem;gap:.5rem;max-width:none}
+.tools span{flex:none;padding:.3rem .8rem .3rem .35rem;border:1px solid var(--line)!important;border-radius:99px;background:var(--card);font-weight:600;font-size:.9rem}
+.ic{width:24px;height:24px;border-radius:50%;font-size:.62rem}
+.lead{margin-bottom:0}
+.hero .cta{margin-top:1.6rem}
+.pn{box-shadow:0 24px 50px -36px rgba(11,42,60,.7)}
+.cap3{margin-top:.2rem}
+@media(max-width:900px){.hg h1.nm{font-size:clamp(3.4rem,17vw,5.5rem)}}
+
+.py{background:var(--forest);color:var(--on);border-radius:14px;border-top:4px solid var(--brassl);padding:clamp(1.4rem,3vw,2.2rem);margin:2rem 0 2.2rem;box-shadow:0 26px 50px -36px rgba(11,42,60,.7)}
+.pyh small{font:700 .76rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--brassl)}
+.py h3{font:400 clamp(3rem,8vw,5.2rem)/.95 'Anton',Impact,sans-serif;text-transform:uppercase;color:#fff;letter-spacing:.01em;margin:.2rem 0 1.4rem}
+.pyg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.pyg h4{font:700 .76rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--onm);margin-bottom:.7rem}
+.c2{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0}
+.c2 li{border:1px solid rgba(244,248,246,.3);border-radius:99px;padding:.2rem .8rem;font-weight:500;font-size:.95rem;transition:background .2s,color .2s,border-color .2s}
+.c2 li:hover{background:var(--brassl);color:#0B2A3C;border-color:var(--brassl)}
+.pyp{margin-top:1.5rem;color:var(--onm);font-size:.95rem}.pyp a{color:var(--brassl);font-weight:700}
+.sk.k3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.pyg{grid-template-columns:1fr}.sk.k3{grid-template-columns:1fr}}
+
+.hg h1.nm2{display:block;font:600 clamp(3.2rem,8vw,6rem)/1 var(--serif);letter-spacing:-.035em;text-transform:none;color:var(--ink);margin-bottom:1.5rem}
+.nm2 em{font-style:italic;font-weight:400;color:#12A383}
+.nm2 .ul{display:block;width:min(100%,24rem);height:22px;margin-top:.7rem;overflow:visible}
+.nm2 .ul path{fill:none;stroke:#12A383;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:700;stroke-dashoffset:700;animation:dr 1.7s .3s cubic-bezier(.3,.7,.2,1) forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.nm2 .ul path{animation:none;stroke-dashoffset:0}}
+.pc3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pc3 .py{margin:0;padding:1.5rem}.pc3 .py h3{font-size:clamp(2.6rem,5vw,3.6rem);margin:.2rem 0 1.1rem}
+.pc3 .py:nth-child(2){border-top-color:#5CC3E8}.pc3 .py:nth-child(3){border-top-color:#BFEBDD}
+@media(max-width:900px){.pc3{grid-template-columns:1fr}.hg h1.nm2{font-size:clamp(3rem,14vw,4.6rem)}}
+
+.skg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem}
+.skg .py{margin:0;padding:1.3rem 1.5rem 1.5rem;border-radius:12px;border-top:4px solid var(--brassl);display:flex;flex-direction:column}
+.skg .py h3{font:400 2.1rem/1.1 'Anton',Impact,sans-serif;letter-spacing:.015em;margin:.25rem 0 1rem}
+.skg .pyh small{font-size:.72rem}
+.skg .c2{gap:.4rem}.skg .c2 li{font-size:.88rem;padding:.12rem .7rem}
+@media(max-width:700px){.skg{grid-template-columns:1fr}}
+.hero .cta{gap:.6rem}.hero .btn{padding:.75rem 1.05rem;font-size:.95rem}
+
+.about p:first-child{font:500 clamp(1.1rem,1.7vw,1.3rem)/1.6 var(--serif)}
+.about p{font-size:1.05rem}
+.r.dup{outline:2px solid var(--brass);outline-offset:3px;border-radius:6px}.tbl.clean .dup{outline-color:transparent}
+.r.dup i{opacity:1}
+.vc2 .bb{opacity:.5}
+.fl2{margin:.9rem 0 .8rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+<header><div class="wrap"><nav aria-label="Primary">
+<a class="logo" href="#home">Tokaa Raafat</a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="nl">Menu</button>
+<ul id="nl"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
+<main id="main">
+<section class="hero" id="home"><div class="wrap hg">
+<div class="hl">
+<h1 class="nm2"><span>Tokaa <em>Raafat</em></span><svg class="ul" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path d="M2 18 L60 12 L110 17 L170 7 L230 13 L290 4 L340 9 L398 3"/></svg></h1>
+<p class="band">Junior Data Analyst | Developing toward Data Science</p>
+<div class="tools" aria-label="Main tools"><span><b class="ic i1">Py</b>Python</span><span><b class="ic i2">SQL</b>SQL</span><span><b class="ic i3">Xl</b>Excel</span></div>
+<p class="lead">I clean and explore data, find the patterns in it and present them clearly. I’m looking for a junior data analyst role.</p>
+<div class="cta"><a class="btn p" href="#projects">Explore my projects</a><a class="btn s" href="#contact">Get in touch</a><a class="btn s" href="https://tokaaraafatt-portfolio.vercel.app/Tokaa_Raafat_CV.pdf">Download CV</a></div>
+</div>
+<div class="hr">
+<div class="pn">
+<div class="ph"><span>Analytics overview</span><div class="seg" role="group" aria-label="Data state"><button type="button" data-s="0" aria-pressed="true">Raw</button><button type="button" data-s="1" aria-pressed="false">Cleaned</button><button type="button" data-s="2" aria-pressed="false">Insight</button></div></div>
+<svg id="sc" viewBox="0 0 480 290" role="img" aria-label="Illustrative scatter plot in which scattered points organise into a trend line"></svg>
+<p class="cap2" id="cap" aria-live="polite">Raw data: scattered, with noise and outliers.</p>
+<p class="cap3">Illustrative data, hover the points. Not real results.</p>
+</div></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+<div class="rv">
+<p>I’m Tokaa, a Junior Data Analyst who enjoys turning messy data into clear answers. I work with Python, SQL and Excel to clean, explore and analyze data, then use visualizations and dashboards to make the findings easier to understand.</p>
+<p>I’m particularly interested in understanding what the numbers are saying: finding patterns, asking better questions, and turning analysis into something useful. I’m also developing my skills in data science and machine learning as I grow beyond analytics.</p>
+</div>
+<aside class="viz rv" aria-label="Illustration: messy data becoming clean data"><div class="vc2" id="vc2">
+<div class="ph"><span>Messy to clear</span><div class="seg" role="group" aria-label="Table state"><button type="button" data-t="m" aria-pressed="true">Messy</button><button type="button" data-t="c" aria-pressed="false">Clean</button></div></div>
+<div class="tbl" id="tbl">
+<div class="r"><i></i><i></i><i class="na"></i><i></i></div>
+<div class="r"><i></i><i class="na"></i><i></i><i></i></div>
+<div class="r dup"><i></i><i class="na"></i><i></i><i></i></div>
+<div class="r"><i class="na"></i><i></i><i></i><i></i></div>
+</div>
+<p class="fl2" id="fl2">Gaps (dashed) and a duplicated row (outlined).</p>
+<svg viewBox="0 8 300 82" aria-hidden="true"><line x1="6" y1="82" x2="294" y2="82" stroke="var(--line)"/><rect class="bb" style="--h:26px" x="20" y="56" width="30" height="26" rx="3"/><rect class="bb" style="--h:38px" x="76" y="44" width="30" height="38" rx="3"/><rect class="bb" style="--h:52px" x="132" y="30" width="30" height="52" rx="3"/><rect class="bb" style="--h:46px" x="188" y="36" width="30" height="46" rx="3"/><rect class="bb" style="--h:68px" x="244" y="14" width="30" height="68" rx="3"/></svg>
+<p class="cap">Illustrative graphic, not real data.</p></div></aside>
+</div></section>
+
+<section class="skills" id="skills"><div class="wrap">
+<p class="eyebrow">Skills</p><h2>Tools and technologies</h2>
+<div class="skg rv">
+<div class="py"><div class="pyh"><small>Main language</small><h3>Python</h3></div><ul class="c2"><li>Pandas</li><li>NumPy</li><li>Data cleaning</li><li>Exploratory analysis</li><li>Matplotlib</li><li>Plotly</li><li>Streamlit</li><li>BeautifulSoup</li><li>Web scraping</li><li>REST APIs</li></ul></div>
+<div class="py"><div class="pyh"><small>Querying</small><h3>SQL</h3></div><ul class="c2"><li>Querying data</li><li>JOINs</li><li>GROUP BY</li><li>Aggregations</li></ul></div>
+<div class="py"><div class="pyh"><small>Reporting</small><h3>Excel</h3></div><ul class="c2"><li>Power Query</li><li>Pivot Tables</li><li>KPI dashboards</li><li>Slicers</li></ul></div>
+<div class="py"><div class="pyh"><small>Foundations</small><h3>Machine Learning</h3></div><ul class="c2"><li>Regression</li><li>Foundational ML concepts</li></ul></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<p class="eyebrow">Case studies</p><h2>Selected projects</h2>
+<p class="sub">Practical projects covering data preparation, analysis and visualization. Each one starts with a question.</p>
+
+<article class="case rv">
+<div><p class="num">01 · 2025 · Excel</p>
+<h3>Sales Performance Analytics Dashboard</h3>
+<p class="q">Which categories, regions and cities drive sales, and how do returns and discounts affect net sales?</p>
+<dl><dt>Data</dt><dd>Retail sales data across four tables: about 10,000 order lines, returns, sales reps and shipping costs.</dd>
+<dt>Cleaning and transformation</dt><dd>Combined the tables in Power Query into one data model and derived COGS, discount value and delivery-duration fields.</dd>
+<dt>Analysis and dashboard</dt><dd>KPI dashboard (total and net sales, returns, discounts, COGS, customers, orders) built with 20 pivot tables, 14 charts and slicers for city, sales rep, category and return status.</dd>
+<dt>Insight</dt><dd>From 2014 to 2017 revenue grew 51%. Technology was the top category at 36% of sales, with California and New York City as the top state and city. Sales are concentrated in a few categories and locations, which makes them the first place to look when planning stock and targets.</dd></dl>
+<ul class="tags"><li>Excel</li><li>Power Query</li><li>Pivot Tables</li><li>Data Model</li><li>Slicers</li></ul>
+<div class="links"><a href="https://github.com/tokaaraafat/Sales-Performance-Analytics-Dashboard-System-">View on GitHub</a></div></div>
+<div class="vis"><figure class="shot"><svg class="th" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect class="k" x="14" y="14" width="68" height="34" rx="5"/><rect class="k" x="90" y="14" width="68" height="34" rx="5"/><rect class="k" x="166" y="14" width="68" height="34" rx="5"/><rect class="k" x="242" y="14" width="64" height="34" rx="5"/><rect class="h" x="22" y="26" width="30" height="6" rx="3"/><rect class="b" x="98" y="26" width="30" height="6" rx="3"/><rect class="h" x="174" y="26" width="30" height="6" rx="3"/><rect class="b" x="250" y="26" width="30" height="6" rx="3"/><rect class="k" x="14" y="60" width="140" height="126" rx="6"/><rect class="b" x="30" y="130" width="22" height="40"/><rect class="h" x="62" y="100" width="22" height="70"/><rect class="b" x="94" y="118" width="22" height="52"/><rect class="b" x="126" y="140" width="18" height="30"/><rect class="k" x="166" y="60" width="140" height="126" rx="6"/><path class="l2" d="M180 160 L206 140 L232 148 L258 112 L284 92"/></svg><img src="projects/sales-performance-dashboard.webp" alt="Excel sales dashboard with KPI cards, category, city and state charts and slicers" loading="lazy" onerror="this.remove()"></figure>
+<div class="panel"><h4>What the model contains</h4><div class="kpis"><div><b>~10,000</b><span>order lines</span></div><div><b>4</b><span>source tables</span></div><div><b>20</b><span>pivot tables</span></div><div><b>14</b><span>charts</span></div></div><p class="note">Figures from the project write-up.</p></div></div>
+</article>
+
+<article class="case rv">
+<div><p class="num">02 · 2026 · Python</p>
+<h3>Financial Performance Visualizer and Analytics Dashboard</h3>
+<p class="q">How do a company’s stock price and quarterly revenue move together, and how volatile is each stock?</p>
+<dl><dt>Data</dt><dd>Daily stock prices from yfinance and quarterly revenue tables scraped with BeautifulSoup, for Tesla and GameStop.</dd>
+<dt>Cleaning and transformation</dt><dd>Merged the revenue tables with the daily prices in Pandas into one dataset.</dd>
+<dt>Analysis and dashboard</dt><dd>Streamlit dashboard with dual-axis Plotly charts, a 50-day moving average and metrics for current price, annualized volatility and latest quarterly revenue.</dd>
+<dt>Insight</dt><dd>When captured (Oct 2026), GameStop’s annualized volatility was 82.5% versus 57.3% for Tesla, whose latest quarterly revenue was $21,454M. Price risk differed widely between the two, so revenue and price are best read side by side.</dd></dl>
+<ul class="tags"><li>Python</li><li>Pandas</li><li>yfinance</li><li>BeautifulSoup</li><li>Plotly</li><li>Streamlit</li></ul>
+<div class="links"><a href="https://financial-dashboard-tokaaraafat.streamlit.app/">Open live demo</a><a href="https://github.com/tokaaraafat/financial-performance-dashboard">View on GitHub</a></div></div>
+<div class="vis"><figure class="shot"><svg class="th" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect class="k" x="14" y="14" width="292" height="172" rx="6"/><rect class="b" x="40" y="134" width="28" height="36"/><rect class="b" x="100" y="122" width="28" height="48"/><rect class="b" x="160" y="108" width="28" height="62"/><rect class="b" x="220" y="96" width="28" height="74"/><path class="l1" d="M30 110 L70 84 L110 98 L150 62 L190 72 L230 44 L290 54"/><path class="l2 dsh" d="M30 100 L110 90 L190 70 L290 58"/></svg><img src="projects/financial-dashboard.webp" alt="Streamlit dashboard showing Tesla stock price against quarterly revenue with key metrics" loading="lazy" onerror="this.remove()"></figure>
+<div class="panel"><h4>Annualized volatility, captured Oct 2026</h4>
+<div class="hb"><div class="lb"><span>GameStop</span><span>82.5%</span></div><div class="tr"><div class="fl hi" style="--w:82.5%"></div></div></div>
+<div class="hb"><div class="lb"><span>Tesla</span><span>57.3%</span></div><div class="tr"><div class="fl" style="--w:57.3%"></div></div></div>
+<p class="note">Live values in the demo will differ.</p></div></div>
+</article>
+
+<article class="case rv">
+<div><p class="num">03 · 2026 · Excel</p>
+<h3>Bike Sales Customer Analysis Dashboard</h3>
+<p class="q">Which customers buy bikes, and what separates buyers from non-buyers?</p>
+<dl><dt>Data</dt><dd>A customer dataset of 1,000 records.</dd>
+<dt>Cleaning and transformation</dt><dd>Cleaned the records and engineered age brackets.</dd>
+<dt>Analysis and dashboard</dt><dd>Interactive Excel dashboard with slicers for marital status, region and education, analysing purchases by age, income, gender and commute distance.</dd>
+<dt>Insight</dt><dd>Middle-aged customers bought at 55% versus 31 to 36% for other age groups, and purchase rates fell from about 55% under 1 mile to about 30% beyond 10 miles. Age bracket and commute distance are useful starting points for segmenting customers.</dd></dl>
+<ul class="tags"><li>Excel</li><li>Pivot Tables</li><li>Slicers</li><li>Data Cleaning</li></ul>
+<div class="links"><a href="https://github.com/tokaaraafat/bike-sales-data-analysis">View on GitHub</a></div></div>
+<div class="vis"><figure class="shot"><svg class="th" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect class="k" x="14" y="14" width="292" height="172" rx="6"/><rect class="h" x="32" y="34" width="150" height="14" rx="3"/><rect class="b" x="32" y="58" width="100" height="14" rx="3"/><rect class="b" x="32" y="82" width="110" height="14" rx="3"/><rect class="b" x="32" y="106" width="84" height="14" rx="3"/><rect class="h" x="32" y="130" width="120" height="14" rx="3"/><rect class="b" x="32" y="154" width="70" height="14" rx="3"/><path class="l2" d="M206 150 L226 120 L246 112 L266 82 L288 66"/><path class="l1" d="M206 160 L226 150 L246 130 L266 128 L288 110"/></svg><img src="projects/bike-sales-dashboard.webp" alt="Excel bike sales dashboard with income, age bracket and commute distance charts" loading="lazy" onerror="this.remove()"></figure>
+<div class="panel"><h4>Purchase rate by customer group</h4>
+<div class="hb"><div class="lb"><span>Middle-aged customers</span><span>55%</span></div><div class="tr"><div class="fl hi" style="--w:55%"></div></div></div>
+<div class="hb"><div class="lb"><span>Other age groups</span><span>31 to 36%</span></div><div class="tr"><div class="fl" style="--w:36%"></div></div></div>
+<div class="hb"><div class="lb"><span>Commute under 1 mile</span><span>about 55%</span></div><div class="tr"><div class="fl hi" style="--w:55%"></div></div></div>
+<div class="hb"><div class="lb"><span>Commute over 10 miles</span><span>about 30%</span></div><div class="tr"><div class="fl" style="--w:30%"></div></div></div>
+<p class="note">Figures from the project write-up.</p></div></div>
+</article>
+<p class="more"><a class="btn" href="https://github.com/tokaaraafat">Explore more on GitHub</a></p>
+</div></section>
+
+<section class="skills" id="experience"><div class="wrap tl">
+<div class="col rv"><h2>Experience</h2>
+<div class="item"><time>Oct 2024 to Sep 2025</time><h3>Developer</h3><p class="org">CompuSharaf, Cairo, Egypt</p><ul><li>Validated data accuracy through systematic testing and reporting, identified inconsistencies, and documented findings in structured test reports.</li><li>Gathered data and business requirements from cross-functional teams and translated them into technical solutions, from requirements through deployment and user acceptance testing.</li><li>Analysed business and operational data to define reporting needs and system enhancements.</li></ul></div>
+<div class="item"><time>Aug 2022</time><h3>Network and Security Intern</h3><p class="org">ALMARASEM, Cairo, Egypt</p><ul><li>Monitored network systems and troubleshot connectivity issues, applying IP addressing, subnetting and routing fundamentals.</li></ul></div>
+</div>
+<div class="col rv" id="education"><h2>Education and training</h2>
+<div class="item"><time>Jul 2026 to Jan 2027 (expected), in progress</time><h3>Data Scientist Track by IBM</h3><p class="org">Digital Egypt Pioneers Initiative (DEPI), MCIT</p><ul><li>Pandas, NumPy, Matplotlib and API-based data extraction, plus the IBM Data Science course on Coursera.</li></ul></div>
+<div class="item"><time>Graduated 2024</time><h3>B.Sc. in Computer and Information Science</h3><p class="org">Sadat Academy for Management Sciences, Cairo</p><ul><li>GPA 3.31 (Very Good).</li><li>Graduation project: Auto Aid, a Flutter and Firebase app matching users with nearby helpers via real-time location.</li></ul></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<h2>Let’s connect</h2>
+<p>I’m interested in data-focused opportunities and in collaborating on meaningful projects.</p>
+<div class="cl">
+<a href="mailto:tokaraafat369@gmail.com"><small>Email</small><strong>tokaraafat369@gmail.com</strong></a>
+<a href="https://www.linkedin.com/in/tokaaraafat/"><small>LinkedIn</small><strong>in/tokaaraafat</strong></a>
+<a href="https://github.com/tokaaraafat"><small>GitHub</small><strong>tokaaraafat</strong></a>
+<a href="https://tokaaraafatt-portfolio.vercel.app/Tokaa_Raafat_CV.pdf"><small>CV (PDF)</small><strong>Download</strong></a>
+<button class="copy" id="cp" type="button" aria-live="polite">Copy email</button>
+</div></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Tokaa Raafat, Cairo, Egypt</span><a href="#home">Back to top</a></div></footer>
+<script>
+(function(){
+var btn=document.querySelector('.menu'),ul=document.getElementById('nl');
+btn.addEventListener('click',function(){var o=ul.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+ul.addEventListener('click',function(e){if(e.target.tagName==='A'){ul.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var links=[].slice.call(document.querySelectorAll('nav ul a'));
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s)});
+var pr=document.getElementById('prog');
+function sp(){var h=document.documentElement;pr.style.transform='scaleX('+(h.scrollTop/((h.scrollHeight-h.clientHeight)||1))+')'}
+addEventListener('scroll',sp,{passive:true});sp();
+var cp=document.getElementById('cp'),m='tokaraafat369@gmail.com';
+cp.addEventListener('click',function(){function ok(){cp.textContent='Copied';setTimeout(function(){cp.textContent='Copy email'},1800)}
+if(navigator.clipboard){navigator.clipboard.writeText(m).then(ok,function(){location.href='mailto:'+m})}else{location.href='mailto:'+m}});
+})();
+</script>
+<script>
+(function(){
+var sv=document.getElementById('sc');if(!sv)return;var NS='http://www.w3.org/2000/svg',N=46,seed=7;
+function rnd(){seed=(seed*9301+49297)%233280;return seed/233280}
+function tr(x){return 250-(x-30)*.55}
+var h='';for(var g=0;g<5;g++){h+='<line class="gl" x1="30" x2="460" y1="'+(30+g*55)+'" y2="'+(30+g*55)+'"/>'}
+h+='<line class="ax" x1="30" y1="260" x2="460" y2="260"/><line class="ax" x1="30" y1="20" x2="30" y2="260"/><text x="456" y="278" text-anchor="end">variable x</text><text x="36" y="16">variable y</text>';
+sv.innerHTML=h+'<path class="tl2" d="M30 '+tr(30)+' L450 '+tr(450)+'"/><text class="an" x="300" y="70">Trend</text>';
+var P=[];for(var i=0;i<N;i++){var x=40+rnd()*400,c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',0);c.setAttribute('r',5);
+var t=document.createElementNS(NS,'title');t.textContent='Illustrative data point';c.appendChild(t);
+P.push({el:c,x:x,raw:25+rnd()*230,cl:tr(x)+(rnd()-.5)*90,in:tr(x)+(rnd()-.5)*26,out:i%12===3});sv.insertBefore(c,sv.querySelector('.an'))}
+var caps=['Raw data: scattered, with noise and outliers.','Cleaned: missing values and duplicates handled, outliers flagged.','Insight: with the noise gone, the relationship shows. This is the idea behind regression.'];
+var btns=document.querySelectorAll('.pn .seg button'),cap=document.getElementById('cap'),timers=[];
+function set(k){sv.setAttribute('class','st'+k);cap.textContent=caps[k];
+P.forEach(function(p){var y=k===0?p.raw:k===1?p.cl:p.in;p.el.style.transform='translateY('+y+'px)';p.el.setAttribute('class',(k>0&&p.out)?'out':'')});
+btns.forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.s===k))})}
+function stop(){timers.forEach(clearTimeout);timers=[]}
+btns.forEach(function(b){b.addEventListener('click',function(){stop();set(+b.dataset.s)})});
+set(0);
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){set(2)}else{timers=[setTimeout(function(){set(1)},1500),setTimeout(function(){set(2)},3300)]}
+var vc=document.getElementById('vc2'),tb=document.getElementById('tbl'),fl=document.getElementById('fl2');
+document.querySelectorAll('#vc2 .seg button').forEach(function(b){b.addEventListener('click',function(){var c=b.dataset.t==='c';tb.classList.toggle('clean',c);vc.classList.toggle('clean',c);
+fl.textContent=c?'Gaps filled, duplicate removed.':'Gaps (dashed) and a duplicated row (outlined).';
+document.querySelectorAll('#vc2 .seg button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))})})});
+})();
+</script>
+<script>
+(function(){var sv=document.getElementById('sc');if(!sv)return;var box=sv.closest('.pn'),t=document.createElement('div');t.id='tip';t.textContent='Illustrative point';box.appendChild(t);
+sv.addEventListener('mousemove',function(e){if(e.target.tagName!=='circle'){t.style.opacity=0;return}var r=box.getBoundingClientRect();t.style.left=(e.clientX-r.left+12)+'px';t.style.top=(e.clientY-r.top-30)+'px';t.style.opacity=1});
+sv.addEventListener('mouseleave',function(){t.style.opacity=0})})();
+</script>
+</body>
+</html>

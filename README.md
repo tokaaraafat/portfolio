@@ -1,5 +1,7 @@
 # Tokaa Raafat | Data Analyst Portfolio
 
+**Live Portfolio:** [Visit My Portfolio](https://tokaaraafat.github.io/portfolio/)
+
 Welcome to my personal portfolio repository!
 
 I'm Tokaa Raafat, a Junior Data Analyst developing toward Data Science. This portfolio showcases my background, technical skills, projects, and experience in working with data.
@@ -33,8 +35,8 @@ My data-related toolkit includes:
 
 - **GitHub:** [@tokaaraafat](https://github.com/tokaaraafat)
 - **LinkedIn:** [Tokaa Raafat](YOUR_LINKEDIN_URL)
-- **Portfolio:** [Visit My Portfolio](YOUR_LIVE_PORTFOLIO_URL)
+- **Portfolio:** [Visit My Portfolio](https://tokaaraafat.github.io/portfolio/)
 
 ---
 
-*Thanks for visiting my portfolio!*
+Thanks for visiting my portfolio!
